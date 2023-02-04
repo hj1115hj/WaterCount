@@ -6,11 +6,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Close
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -38,21 +38,6 @@ fun WellnessTaskItem(
             Icon(Icons.Filled.Close, contentDescription = "Close")
         }
     }
-}
-
-@Composable
-fun WellnessTaskItem(
-    taskName: String, onClose: () -> Unit, modifier: Modifier = Modifier
-) {
-    var checkedState by rememberSaveable { mutableStateOf(false) }
-
-    WellnessTaskItem(
-        taskName = taskName,
-        checked = checkedState,
-        onCheckedChange = { newValue -> checkedState = newValue },
-        onClose = onClose,
-        modifier = modifier,
-    )
 }
 
 @Preview(showBackground = true)
