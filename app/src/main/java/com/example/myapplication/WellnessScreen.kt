@@ -7,6 +7,7 @@ import androidx.compose.ui.tooling.preview.Preview
 @Composable
 fun WellnessScreen(modifier: Modifier = Modifier) {
     StatefulCounter(modifier)
+    WellnessTaskList()
 }
 
 @Preview(showBackground = true)
